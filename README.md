@@ -1,4 +1,4 @@
-#Example Behat project w/ Page Object Extensions
+# Example Behat project w/ Page Object Extensions
 
 
 ## Steps
