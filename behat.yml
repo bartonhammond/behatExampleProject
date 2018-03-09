@@ -1,0 +1,19 @@
+default:
+  suites:
+    home:
+      paths:
+         - "%paths.base%/features/home.feature"
+      contexts:
+        - HomeContext
+  extensions:
+    Behat\MinkExtension:
+      browser_name: 'chrome'
+      javascript_session: selenium2
+      selenium2:
+        wd_host: http://0.0.0.0:4444/wd/hub
+        capabilities: { "browser": "chrome", "version": "", 'chrome': {'switches':['--start-maximized']}}
+      base_url: https://www.wisnet.com
+
+    SensioLabs\Behat\PageObjectExtension:
+      namespaces:
+        page: ["%paths.base%/features/bootstrap/page"]
