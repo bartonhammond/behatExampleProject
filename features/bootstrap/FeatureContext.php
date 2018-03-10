@@ -2,11 +2,10 @@
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/../../vendor/phpunit/phpunit/src/Framework/Assert/Functions.php';
  
-use Behat\Behat\Context\Context;
-use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 
-class FeatureContext extends Page implements Context, \Behat\Behat\Context\SnippetAcceptingContext
-{
+use SensioLabs\Behat\PageObjectExtension\Context\PageObjectContext;
+
+class FeatureContext extends PageObjectContext {
     protected $driver;
     protected $session;
     
